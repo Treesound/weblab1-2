@@ -10,7 +10,7 @@ echo "\nYour order is: $very_bad_unclear_name.";
 
 //task 2 - numbers
 echo "<br>";
-echo "<b>task 2 - numbers</b><br>";
+echo "<br><b>task 2 - numbers</b><br>";
 $variableOne = 50;
 echo $variableOne;
 echo "<br>";
@@ -22,4 +22,13 @@ echo "<br>";
 $lastMonth = 1187.23;
 $thisMonth = 1089.98;
 echo $lastMonth - $thisMonth;
+
+//task 11 - multiplication and division
+echo "<br>";
+echo "<br><b>task 11 - multiplication and division</b><br>";
+$numLanguages = 4;
+$months = 11;
+$days = $months * 16;
+$daysPerLanguage = $days/$numLanguages;
+echo $daysPerLanguage;
 ?>
