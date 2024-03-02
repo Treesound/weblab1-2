@@ -131,4 +131,55 @@ function printStringReturnNumber($inputString){
 $myNum = (printStringReturnNumber("68904"));
 echo $myNum ."<br>";
 
+//task 16 - functions (continuation)
+echo "<br>";
+echo "<br><b>task 15 - functions</b><br>";
+
+function increaseEnthusiasm($inputString){
+    echo $inputString . '!' . "<br>";
+}
+increaseEnthusiasm("testing Enthusiasm");
+
+function repeatThreeTimes($input){
+    for ($i=0;$i<3;$i++){
+        echo $input . "<br>";
+    }
+    
+}
+repeatThreeTimes("repeating ");
+
+function cut ($string, $symbolsLeft = 10){
+    $result = '';
+    for ($i=0; $i<$symbolsLeft; $i++){
+        $result .= $string[$i];
+    }
+    echo $result . "<br>";
+}
+cut ("leave only the first 5 symbols", 5);
+
+
+//element - индекс элемета в массиве, с которого начинаем обход. По умолчанию 0
+function recursiveArrayDisplay($array, $element = 0){
+    if ($element==(count($array)))
+        return;
+    echo $array[$element] . " ";
+    recursiveArrayDisplay($array, ($element+1));
+}
+$numberArray = array (1,2,3,4,5,6,7,8,9,999);
+recursiveArrayDisplay($numberArray);
+
+echo "<br>";
+function addingDigits($input){
+    $result = 0;
+    while ($input>0){
+        $result += $input%10;      
+        $input = floor($input/10); 
+    }
+    if ($result > 9){   
+        $result = addingDigits($result);
+    }     
+    echo $result;  
+}
+echo addingDigits(1999);
+
 ?>
