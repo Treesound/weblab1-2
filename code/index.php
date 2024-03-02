@@ -31,4 +31,9 @@ $months = 11;
 $days = $months * 16;
 $daysPerLanguage = $days/$numLanguages;
 echo $daysPerLanguage;
+
+//task 12 - exponentiation
+echo "<br>";
+echo "<br><b>task 12 - exponentiation</b><br>";
+echo '8'**'2';
 ?>
