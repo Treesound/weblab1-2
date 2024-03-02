@@ -36,4 +36,16 @@ echo $daysPerLanguage;
 echo "<br>";
 echo "<br><b>task 12 - exponentiation</b><br>";
 echo '8'**'2';
+
+//task 13 - assignment operators
+echo "<br>";
+echo "<br><b>task 13 - assignment operators</b><br>";
+$myNum = 50;
+$answer = $myNum;
+$answer +=2;
+$answer *=2;
+$answer -=2;
+$answer /=2;
+$answer -=$myNum;
+echo $answer;
 ?>
