@@ -120,4 +120,15 @@ while ($sum<=10){
     $i++;
 }
 echo "You have to add up first " . ($i) . " elements of the array" . "<br>";
+
+//task 15 - functions
+echo "<br>";
+echo "<br><b>task 15 - functions</b><br>";
+function printStringReturnNumber($inputString){
+    echo $inputString."<br>";
+    return (float)$inputString;
+}
+$myNum = (printStringReturnNumber("68904"));
+echo $myNum ."<br>";
+
 ?>
