@@ -182,4 +182,69 @@ function addingDigits($input){
 }
 echo addingDigits(1999);
 
+
+//task 17 - arrays
+echo "<br>";
+echo "<br><b>task 17 - arrays</b><br>";
+//в моем массиве будет 10 элеметнов, но можно конечно задать любое значение
+$arrayX = array();
+for ($i=0; $i<10; $i++){
+    array_push($arrayX, "x");
+    for ($j=$i; $j>0; $j--)
+        $arrayX[$i] .= "x";
+}
+echo print_r($arrayX) . "<br>";
+
+function arrayFill($value, $numOfElements){
+    $currentArray=array();
+    for ($i=0; $i<$numOfElements; $i++)
+        array_push($currentArray, "$value");
+    return $currentArray;
+}
+$arrayTest = array(arrayFill("Y", 8));
+echo print_r($arrayTest) . "<br>";
+
+$arrayForCounting = array(array (1, 2, 3), array (4, 5), array(6));
+$sum = 0;
+foreach ($arrayForCounting as $row){
+    foreach ($row as $column)
+        $sum +=$column;
+}
+echo "Array sum: " . $sum . "<br>";
+
+$values=1;
+$arrayToTen = array(array());
+for($i=0; $i<3; $i++)
+    for($j=0; $j<3; $j++){
+        $arrayToTen[$i][$j]=$values;
+        $values++;
+}
+echo print_r($arrayToTen) . "<br>";
+
+//Создайте массив с элементами 2, 5, 3, 9. Умножьте первый элемент массива на второй, 
+//а третий элемент на четвертый. Результаты сложите, присвойте переменной $result.
+// Выведите на экран значение этой переменной.
+$fourElements = array (2, 5, 3, 9);
+echo $result = $fourElements[0]*$fourElements[1]+$fourElements[2]*$fourElements[3] . "<br>";
+
+$user = array("name"=>"Ivan",
+                "surname"=>"Ivanov",
+                "patronymic"=>"Ivanovich");
+echo $user["surname"] . " " . $user["name"] . " " . $user["patronymic"] . "<br>";
+
+$date = array("year"=>"2024",
+                "month"=>"March",
+                "day"=>"03");
+echo $date["year"] . "-" . $date["month"] . "-" . $date["day"] . "<br>";
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+$count = 0;
+foreach ($arr as $value)
+    if ($value != NULL)
+        $count++;
+echo "Number of elements: " . $count . "<br>";
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+$numberOfElements = count($arr);
+echo "Last element: " . $arr[$numberOfElements-1] . "<br>" . "Penultimate element: " . $arr[$numberOfElements-2] . "<br>";
 ?>
