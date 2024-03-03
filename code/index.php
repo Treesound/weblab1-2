@@ -328,5 +328,54 @@ for ($i=0; $i<21; $i++){
 echo "<br>";   
 }
         
+//task 20 - function combinations
+echo "<br>";
+echo "<br><b>task 20 - function combinations</b><br>";
 
+$arr = array (5,7,8,2,4,6,7,3,4);
+$mean = array_sum($arr)/count($arr);
+echo $mean . "<br>";
+
+//сумма чисел от 1 до 100 реализована с помощью рекурсии
+$sum = 0;
+function toHundred ($i, $sum = 0){
+    $sum+=$i;
+    if ($i<100){
+        $i++;
+        toHundred($i, $sum);
+    }       
+    else 
+        echo $sum;
+}
+toHundred(1);
+echo "<br>";
+
+//задача про извлечение квадратных корней из элементов массива
+//релализовано при помощи рекурсии
+function squareRoot(&$arr, $numberOfElements, $currentElement = 0){
+    $arr[$currentElement]=sqrt($arr[$currentElement]);
+    if ($currentElement<($numberOfElements-1)){
+        $currentElement++;
+        squareRoot($arr,$numberOfElements,$currentElement);
+    }
+    else return;
+}
+$arr = array (1,4,9,25,144);
+$arrElements=count($arr);
+squareRoot($arr, $arrElements);
+echo print_r($arr) . "<br>";
+
+//Заполните массив числами от 1 до 26 так, чтобы ключами этих чисел были буквы английского алфавита: ['a'=>1, 'b'=>2...].
+//Сделайте это не используя цикл. 
+$keys = range('a', 'z');
+$values = range(1, 26);
+$final = array_combine($keys, $values);
+echo print_r($final) . "<br>";
+
+$numberString = '1234567890';
+echo (int)substr($numberString,0,2) +
+     (int)substr($numberString,2,2) +
+     (int)substr($numberString,4,2) +  
+     (int)substr($numberString,6,2) +
+     (int)substr($numberString,8,2);
 ?>
