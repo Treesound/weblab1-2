@@ -247,4 +247,74 @@ echo "Number of elements: " . $count . "<br>";
 $arr = ['a', 'b', 'c', 'd', 'e'];
 $numberOfElements = count($arr);
 echo "Last element: " . $arr[$numberOfElements-1] . "<br>" . "Penultimate element: " . $arr[$numberOfElements-2] . "<br>";
+
+
+//task 18 - if/else
+echo "<br>";
+echo "<br><b>task 18 - if/else</b><br>";
+
+function sumBigger10 ($one,$two){
+    if ($one + $two > 10) 
+        return true;
+    else 
+        return false;
+}
+echo "Is 20 plus 5 bigger than 10?: " . sumBigger10(20,5) . "<br>";
+
+function equal ($one,$two){
+    if ($one === $two) 
+        return true;
+    else 
+        return false;
+}
+echo "Are the numbers 20 and 20 equal?: " . equal(20,20) . "<br>";
+
+$test = 0;
+//оригинальный код
+if ($test == 0) {
+    echo 'верно';
+}
+
+echo "<br>";
+
+//сокращенный 
+//если выражение в скобках верно то программа возвращает true, не обязательно писать "верно"
+echo ($test == 0) . "<br>";
+
+
+
+function age ($age){
+    if ($age < 10 || $age > 99)
+        return "Age is bigger than 99 or smaller than 10" . "<br>";
+    else {
+        $sum = 0;
+        while ($age>1){
+            $sum+=$age%10;
+            $age=floor($age/10);
+        }
+        if ($sum<10)
+            return "The sum of digits is a single digit number equal to " . $sum  . "<br>";
+        else 
+            return "The sum of digits is a double digit number equal to ". $sum  . "<br>";
+    }
+}
+echo "testing for 200: " . age(200);
+echo "testing for 20: " . age(20);
+echo "testing for 88: " . age(88);
+
+
+function threeOrNot($arr){
+    if (count($arr)==3){
+        $sum = 0;
+        foreach ($arr as $value){
+            $sum+=$value;
+        }
+        echo "Sum of values: " . $sum . "<br>";  
+    }
+    else echo "Not 3 elements". "<br>";
+}
+$arr = array(4,6,7);
+echo threeOrNot($arr);    
+
+
 ?>
