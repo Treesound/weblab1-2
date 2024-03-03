@@ -133,7 +133,7 @@ echo $myNum ."<br>";
 
 //task 16 - functions (continuation)
 echo "<br>";
-echo "<br><b>task 15 - functions</b><br>";
+echo "<br><b>16 - functions (continuation)</b><br>";
 
 function increaseEnthusiasm($inputString){
     echo $inputString . '!' . "<br>";
