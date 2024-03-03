@@ -317,4 +317,16 @@ $arr = array(4,6,7);
 echo threeOrNot($arr);    
 
 
+//task 19 - loops  
+echo "<br>";
+echo "<br><b>task 19 - loops</b><br>";
+
+for ($i=0; $i<21; $i++){
+    for ($j=$i; $j>0; $j--){
+        echo "x";
+    }
+echo "<br>";   
+}
+        
+
 ?>
